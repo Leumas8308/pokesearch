@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><title>Pokésearch</title><link href="./style.css" rel="stylesheet"></head>
+<body><main>
+<header><h1>Pokésearch</h1><label class="switch"><input type="checkbox" id="dark"> Dark mode</label></header>
+<form id="lookup">
+<label for="game">Game</label><select id="game" disabled></select>
+<section class="panel">
+<label for="species">Pokémon</label><input id="species" list="species-options" autocomplete="off" spellcheck="false" disabled><datalist id="species-options"></datalist>
+<div class="pair"><div><label for="level">Level</label><input id="level" type="number" min="1" max="100" step="1" inputmode="numeric" required></div><div><label for="gender">Gender</label><select id="gender"><option>Unknown</option><option>Male</option><option>Female</option><option>Genderless</option></select></div></div>
+<div class="form-row"><div><label for="form">Form</label><select id="form" disabled></select></div><figure><div id="sprite" hidden role="img"></div><figcaption id="caption"></figcaption></figure></div>
+<button id="display" disabled>Display moves</button>
+<h2>Move list</h2><div aria-live="polite"><ol id="moves"></ol><p id="message">Loading game data…</p></div>
+</section></form><footer><a href="./credits/Sprite-attributions.md">Sprite credits</a> · <a href="./credits/PokeAPI.txt">Data credits</a></footer>
+</main><script type="module" src="./app.js"></script></body></html>
